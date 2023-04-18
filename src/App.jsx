@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Calculator = () => {
+const App = () => {
   const [val, setVal] = useState("");
   const backspace = () => {
     try {
@@ -37,7 +37,7 @@ const Calculator = () => {
                   type="text"
                   className="form-control form-control-lg mb-4 text-center bg-light fs-4 text-primary shadow"
                   value={val}
-                  onChange={(e) => setVal(val + e.target.value)}
+                  onChange={(e) => setVal(e.target.value)}
                 />
                 <div className="row mt-2 text-center">
                   <div className="col-3 px-1">
@@ -216,4 +216,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
+export default App;
