@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Calculator from "./pages/Calculator";
 import { Wrapper } from "./components/Wrapper";
 import { Screen } from "./components/Screen";
+import { ButtonBox } from "./components/ButtonBox";
+import { Button } from "./components/Button";
+import { CalcProvider } from "./context/CalcContext";
 
 const App = () => {
   const btnValues = [
@@ -13,10 +16,16 @@ const App = () => {
   ];
   return (
     <>
-      <Wrapper>
-        <Screen />
-        <h1>app</h1>
-      </Wrapper>
+      <CalcProvider>
+        <Wrapper>
+          <Screen />
+          <ButtonBox>
+            {btnValues.flat().map((btn, i) => {
+              return <Button key={i} value={btn} />;
+            })}
+          </ButtonBox>
+        </Wrapper>
+      </CalcProvider>
       <Calculator />
     </>
   );

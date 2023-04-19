@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const ButtonBox = () => {
+export const ButtonBox = ({children}) => {
   return (
-    <div>ButtonBox</div>
+    <div className='buttonBox'>{children}</div>
   )
 }
