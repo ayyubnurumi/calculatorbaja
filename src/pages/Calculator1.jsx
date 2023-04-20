@@ -14,18 +14,16 @@ const Calculator1 = () => {
     [0, ".", "="],
   ];
   return (
-    <>
-      <CalcProvider>
-        <Wrapper>
-          <Screen />
-          <ButtonBox>
-            {btnValues.flat().map((btn, i) => {
-              return <Button key={i} value={btn} />;
-            })}
-          </ButtonBox>
-        </Wrapper>
-      </CalcProvider>
-    </>
+    <CalcProvider>
+      <Wrapper>
+        <Screen />
+        <ButtonBox>
+          {btnValues.flat().map((btn, i) => {
+            return <Button key={i} value={btn} />;
+          })}
+        </ButtonBox>
+      </Wrapper>
+    </CalcProvider>
   );
 };
 

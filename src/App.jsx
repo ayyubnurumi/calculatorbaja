@@ -6,8 +6,9 @@ import Calculator1 from "./pages/Calculator1";
 const App = () => {
   return (
     <>
-      <Calculator1 />
       <Calculator />
+      <hr className="text-light"/>
+      <Calculator1 />
     </>
   );
 };
