@@ -1,3 +1,4 @@
+/* #region --calculator1-- */
 .screen {
     height: 4rem;
     margin-bottom: 4rem;
@@ -45,3 +46,80 @@
 .opt {
     background: #f79505;
 }
+/* #endregion --calculator1-- */
+
+/* #region --calculator stella-- */
+.container-stella {
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+    transition: all .5s ease;
+}
+
+.calculator-stella {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px #8a817c;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+#display {
+    margin: 0 10px;
+    height: 3rem;
+    max-width: 8.3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+.btn-stella{
+    height: 2rem;
+    width: 2rem;
+    border: 0;
+    border-radius: .5rem;
+    margin: .1rem;
+    font-size: .7rem;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.btn-stella:hover {
+    transform: scale(1.1);
+}
+.btn-stella#equal {
+    height: 4.2rem;
+}
+/* #endregion --calculator stella-- */
