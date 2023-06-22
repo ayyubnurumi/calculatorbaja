@@ -69,16 +69,11 @@
     position: absolute;
     top: 1rem;
     right: 1rem;
-    color: #fff;
     cursor: pointer;
     z-index: 1;
 }
 
-.theme-toggler.active {
-    color: #333;
-}
-
-.theme-toggler.active::before {
+.theme-toggler::before {
     content: "";
     height: 1rem;
     width: 1rem;

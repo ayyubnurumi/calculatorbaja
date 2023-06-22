@@ -20,24 +20,17 @@ export const CalcStella = () => {
       }
     });
   });
-  //   const theme = document.getElementsByClassName("dark");
-  //   const themeIcon = document.getElementsByClassName("toggler-icon");
+  
   const [themeIsDark, setThemeIsDark] = useState(true);
   const handleTheme = () => {
     setThemeIsDark(!themeIsDark);
   };
-  //   const themeToggleBtn = document.getElementsByClassName("theme-toggler");
-  //   let isDark = true;
-  //   themeToggleBtn.addEventListener("click", () => {
-  //     theme.classList.toggle("dark");
-  //     themeToggleBtn.classList.toggle("active");
-  //     isDark = !isDark;
-  //   });
+  
   return (
     <div className="container-stella">
       <div className={`calculator-stella ${themeIsDark ? "dark" : ""}`}>
         <div
-          className={`theme-toggler" ${themeIsDark ? "active" : ""}`}
+          className="theme-toggler"
           onClick={handleTheme}
         >
           <i className="toggler-icon"></i>
