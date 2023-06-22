@@ -122,4 +122,54 @@
 .btn-stella#equal {
     height: 4.2rem;
 }
+/* #region -light theme- */
+.calculator-stella {
+    background-color: #fbfefb;
+}
+.calculator-stella #display {
+    color: #0a1e23;
+}
+.calculator-stella .btn-stella#clear {
+    background-color: #db7f8e;
+    color: #ffdbda;
+}
+.calculator-stella .btn-stella.btn-number-stella {
+    background-color: #339989;
+    color: #7de2d1;
+}
+.calculator-stella .btn-stella.btn-operator-stella {
+    background-color: #b6a6ca;
+    color: #f1e4f3;
+}
+.calculator-stella .btn-stella.btn-equal-stella {
+    background-color: #19647e;
+    color: #eee5e5;
+}
+/* #endregion -light theme */
+
+/* #region -dark theme- */
+.calculator-stella.dark {
+    background-color: #071115;
+}
+.calculator-stella.dark #display {
+    color: #f8fafd;
+}
+.calculator-stella.dark .btn-stella#clear {
+    background-color: #785964;
+    color: #d5c7bc;
+}
+.calculator-stella.dark .btn-stella.btn-number-stella {
+    background-color: #3a606e;
+    color: #f8fafb;
+}
+.calculator-stella.dark .btn-stella.btn-operator-stella {
+    background-color: #afbfc0;
+    color: #4e8098;
+}
+.calculator-stella.dark .btn-stella.btn-equal-stella {
+    background-color: #566246;
+    color: #eee5e5;
+}
+/* #endregion -dark theme */
+
 /* #endregion --calculator stella-- */
