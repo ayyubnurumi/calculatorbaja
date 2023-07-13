@@ -1,42 +1,38 @@
 import React, { useState } from "react";
 
 export const CalcStella = () => {
-  const display = document.getElementById("display");
+  const [digits, setDigits] = useState("");
   const buttons = document.querySelectorAll(".btn-stella");
   buttons.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.onclick = () => {
       if (item.id == "clear") {
-        display.innerText = "";
+        setDigits("");
       } else if (item.id == "backspace") {
-        let string = display.innerText.toString();
-        display.innerText = string.substring(0, string.length - 1);
-      } else if (display.innerText != "" && item.id == "equal") {
-        display.innerText = eval(display.innerText);
-      } else if ((display.innerText = "" && item.id == "equal")) {
-        display.innerText = "empty!";
-        setTimeout(() => (display.innerText = ""), 2000);
+        setDigits(digits.substring(0, digits.length - 1));
+      } else if (digits != "" && item.id == "equal") {
+        setDigits(eval(digits)); // there is no error handler
+      } else if (digits === "" && item.id == "equal") {
+        setDigits("empty!");
+        setTimeout(() => setDigits(""), 2000);
       } else {
-        display.innerText += item.id;
+        setDigits(digits + item.id);
       }
-    });
+    };
   });
-  
+
   const [themeIsDark, setThemeIsDark] = useState(true);
   const handleTheme = () => {
     setThemeIsDark(!themeIsDark);
   };
-  
+
   return (
     <div className="container-stella">
       <div className={`calculator-stella ${themeIsDark ? "dark" : ""}`}>
-        <div
-          className="theme-toggler"
-          onClick={handleTheme}
-        >
+        <div className="theme-toggler" onClick={handleTheme}>
           <i className="toggler-icon"></i>
         </div>
         <div className="display-screen">
-          <div id="display"></div>
+          <div id="display">{digits}</div>
         </div>
         <div className="buttons-stella">
           <table>
