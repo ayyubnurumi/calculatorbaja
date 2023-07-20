@@ -1,3 +1,65 @@
+/* #region --navbar */
+div#navbar-wrapper, div#navbar-wrapper>label {
+    position: fixed;
+    top: 3%; right: 3%;
+    z-index: 4;
+}
+#navbar-box:checked ~ nav {
+    transform: translateX(-50%);
+    transform: scaleX(1);
+}
+div#navbar-wrapper label{
+    transition: .4s ease-in;
+}
+div#navbar-wrapper label span{
+    background-color: limegreen;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    width: 70px; height: 70px;
+    color: black;
+    align-items: center; justify-content: center;
+    font-size: 30px;
+}
+#navbar-box:not(:checked) ~ label span::before{
+    content: '\2630';
+}
+#navbar-box:checked ~ label span::before{
+    content: '\2715';
+}
+div#navbar-wrapper nav {
+    transform: scaleX(0);
+    transform-origin: 95%;
+    transition: transform .4s ease-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #f9f9f9;
+    padding: 0 60px 0 0;
+    margin: 4px 0;
+    border-radius: 50px;
+}
+div#navbar-wrapper nav ul{
+    list-style: none;
+    display: flex; padding: 20px 5px;
+}
+div#navbar-wrapper nav ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: #071115;
+    font-size: 15px;
+    margin: 0 10px;
+    padding: 10px 20px;
+}
+div#navbar-wrapper nav ul li a:hover{
+    background-color: #071115;
+    border-radius: 50px;
+    color: limegreen;
+}
+#navbar-box{
+    display: none;
+}
+/* #endregion --navbar */
+
 /* #region --calculator1-- */
 .screen {
     height: 4rem;
@@ -54,6 +116,7 @@
     place-items: center;
     padding: 3rem;
     transition: all .5s ease;
+    margin-top: 70px;
 }
 
 .calculator-stella {

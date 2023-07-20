@@ -19,14 +19,7 @@ const Calculator = () => {
     }
   };
   return (
-    <div className="container py-5">
-      <div className="row mb-4">
-        <div className="col-12">
-          <h1 className="display-6 fw-bolder text-center text-primary">
-            CALCULATOR
-          </h1>
-        </div>
-      </div>
+    <div className="container py-5" id="calculator-2">
       <div className="row justify-content-center">
         <div className="col-md-6 col-lg-4">
           <div className="card overflow-hidden p-3 shadow">

@@ -26,7 +26,7 @@ export const CalcStella = () => {
   };
 
   return (
-    <div className="container-stella">
+    <div className="container-stella" id="calculator-1">
       <div className={`calculator-stella ${themeIsDark ? "dark" : ""}`}>
         <div className="theme-toggler" onClick={handleTheme}>
           <i className="toggler-icon"></i>
